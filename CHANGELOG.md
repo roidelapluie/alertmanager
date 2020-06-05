@@ -1,5 +1,8 @@
 ## 0.21.0-rc.0 / 2020-06-05
 
+This release is the last release supporting HipChat. Hipchat Server 2.4 will
+reach end of life on 30 June 2020.
+
 * [CHANGE] [amtool] Remove default assignment of environment variables. #2161
 * [CHANGE] [PagerDuty] Enforce 512KB event size limit. #2225
 * [ENHANCEMENT] [amtool] Add `cluster` command to show cluster and peer statuses. #2256
