@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  prometheus: prometheus/prometheus@0.8.0
+  prometheus: prometheus/prometheus@0.9.0
   go: circleci/go@0.2.0
 
 jobs:
@@ -131,7 +131,7 @@ workflows:
         filters:
           tags:
             only: /.*/
-    - prometheus/publish_master:
+    - prometheus/publish_main:
         context: org-context
         requires:
         - test_frontend
@@ -139,7 +139,7 @@ workflows:
         - build
         filters:
           branches:
-            only: master
+            only: main
     - prometheus/publish_release:
         context: org-context
         requires:
